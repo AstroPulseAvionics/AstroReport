@@ -12,6 +12,14 @@
   "**/*.log": false,
   "**/*.out": true,
   "**/*.synctex.gz": true,
-  "**/*.toc": true
+  "**/*.toc": true,
+  "**/*.acn": true,
+  "**/*.bcf": true,
+  "**/*.run.xml": true,
+  "**/*.glo": true,
+  "**/*.ist": true,
+  "**/*.glsdefs": true,
+  "**/*.xdv": true,
+
   },
 }
