@@ -1,0 +1,225 @@
+% !TEX program = xelatex
+% ---------------------IMPORTS---------------------
+\documentclass[en, screen, 12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{svg}
+\usepackage[utf8]{inputenc}
+\usepackage{datetime} % Date time package
+\usepackage{fancyhdr} % For custom headers and footers
+\usepackage[a4paper, margin=1in, headsep=0.5in]{geometry} % Set all margins to 1 inch
+\usepackage{lastpage} % For getting the total number of pages
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{acronym}
+\usepackage{float}
+\usepackage{caption} 
+
+% Set Garamond as main font
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+
+\usepackage[
+    backend=biber,
+    style=ieee,      % or "numeric", "authorylatear", etc. if you want like APA
+    sorting=ynt
+]{biblatex}
+
+\addbibresource{References/references.bib} % Bib file with your references
+
+% Set line spacing to 1.5 (common in research papers)
+\linespread{1.5}
+
+% Global settings for all lists
+% \setlist{itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt}
+\setlist{itemsep=0pt}
+
+% \usepackage{geometry} % Adjust page margins etc.
+
+% ---------------------UNCOMMENT FOR DARK MODE---------------------
+% \usepackage{xcolor}
+% \pagecolor[rgb]{0,0,0} %black
+% % \color[rgb]{255,255,255} %text white
+% \color[rgb]{0.827,0.827,0.827} %text color grey
+
+% ---------------------DOCUMENT VARIABLES ---------------------
+\newcommand{\doctitle}{Electric Propulsion Thruster for Nanosatellites} % EDIT THIS TO CHANGE TITLE !!!!!!
+\newcommand{\VersionNumber}{Version : 1.0.0} % EDIT THIS TO CHANGE VERSION !!!!!!
+
+
+% ---------------------STYLING AND DOC SETUP ---------------------
+% COLORS
+\definecolor{red}{RGB}{255,0,0}
+\definecolor{grey}{RGB}{211,211,211}
+
+% HYPERLINKS
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black
+}
+
+% DATEFORMAT
+\newdateformat{mydate}{\THEDAY\ \monthname[\THEMONTH], \THEYEAR}
+
+% ---------------------HEADER SETUP---------------------
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[height=15pt]{images/ASTROPULSE.png}} % Logo in top left
+\fancyhead[R]{\doctitle} % Page number in top right
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{1.0pt}
+
+\renewcommand{\headrule}{\hbox to\headwidth{\color{black}\leaders\hrule height \headrulewidth\hfill}}
+
+% ---------------------TITLE SETUP---------------------
+% Redefine \maketitle to include the image
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \null\vfill
+    \centering
+    \includegraphics[width=1.0\textwidth]{images/ASTROPULSE LOGO.png}
+    \par\vspace{2em}
+    {\Huge\bfseries\@title\par}
+    \vspace{1.5em}
+    {\Large\@author}
+    \par\vspace{2em}
+    {\Large\@date}
+    \par\vspace{2em}
+    {\Large\VersionNumber}
+    \vfill
+
+    % \textbf{Revision Table}
+    % ------REVISION TABLE------
+    %\begin{table}[htbp]
+    %     \centering
+    %     \begin{tabular}{|c|c|c|c|c|}
+
+    %         \hline
+    %         \textbf{Version} & \textbf{Author(s)} & \textbf{Changes} & \textbf{Approved By} & \textbf{Date} \\
+    %         \hline
+
+    %          &  &  &  &  \\
+    %         \hline
+
+    %          &  &  &  &  \\
+    %         \hline
+    %     \end{tabular}
+
+    %     \label{tab:revision table}
+    % \end{table}
+    
+    \null
+  \end{titlepage}
+}
+\makeatother
+
+% ---------------------TITLE CONTENT---------------------
+\title{Group 17 \\ \doctitle}
+% \author{Authors : Author Names}
+\author{
+Shivam S. Desai, 
+Andrew C. Gonsalves, 
+Gurnoor Gill, \\
+Zachariah T. Blair,
+Zachary A. Scott,
+Gavin Angstad
+}
+
+\date{Date : \mydate\today}
+
+% ---------------------END OF SETUP---------------------
+
+% \includeonly{
+%   content/Project Overview/Introduction.tex,
+%   content/Project Overview/Deliverables and Objectives.tex
+% }
+
+% ---------------------START OF DOCUMENT---------------------
+\begin{document}
+
+% ---------------------TITLE PAGE---------------------
+\maketitle
+
+% ---------------------ABSTRACT---------------------
+% UNCOMMENT IF YOU WANT AN ABSTRACT !!!!
+% \include{content/abstract}
+
+% ---------------------TABLE OF CONTENTS---------------------
+\newpage
+\tableofcontents
+\newpage
+
+% ---------------------ACKNOWLEDGEMENTS---------------------
+\section*{Acknowledgments}
+\input{content/Project Overview/Acknowledgements.tex}
+
+% ---------------------ABBREVIATIONS---------------------
+\newpage
+\section*{List of Abbreviations}
+\input{Abbreviations/Abbreviations.tex}
+
+% ---------------------NOMANCLATURE---------------------
+\newpage
+\section*{NOMANCLATURE}
+\input{Abbreviations/Nomanclature.tex}
+
+% ---------------------------------------------------------
+% \setcounter{page}{1} % Start page numbering
+
+% ---------------------CONTENT---------------------
+
+% PROJECT OVERVIEW
+\include{content/Project Overview/Introduction.tex}
+\include{content/Project Overview/Deliverables and Objectives.tex}
+
+
+% CONCEPTUAL DESIGN
+\include{content/Conceptual Design/System Overview.tex}
+
+% Thruster Design
+\include{content/Conceptual Design/Thruster Design/Hall Thruster Types.tex}
+\include{content/Conceptual Design/Thruster Design/Propellant Selection.tex}
+\include{content/Conceptual Design/Thruster Design/Propellant Feed System and Anode.tex}
+\include{content/Conceptual Design/Thruster Design/Channel Ablative.tex}
+\include{content/Conceptual Design/Thruster Design/Magnetic Field.tex}
+\include{content/Conceptual Design/Thruster Design/Cathode.tex}
+
+% Avionics
+\include{content/Conceptual Design/Avionics/Overview.tex}
+\include{content/Conceptual Design/Avionics/Electrical System.tex}
+\include{content/Conceptual Design/Avionics/Software.tex}
+
+% Testing
+\include{content/Conceptual Design/Testing/Test Stand Concept.tex}
+
+\include{content/Conceptual Design/Final Concept.tex}
+
+% DESIGN DEVELOPMENT
+\section{Design Development}
+
+% PROTOTYPES AND DESIGN VERIFICATION
+\section{Prototypes and Design Verification}
+
+% TESTING
+\section{Testing}
+
+% CLOSING REMARKS
+\section{Closing Remarks}
+
+
+% PROJECT MANAGEMNET
+\section{Project Management}
+
+% ---------------------APPENDIX---------------------
+\appendix
+\include{content/Appendix/Appendix.tex}
+
+% ---------------------CITATIONS---------------------
+
+\newpage
+\printbibliography
+
+\end{document}  
