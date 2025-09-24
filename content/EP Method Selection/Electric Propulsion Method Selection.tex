@@ -1,4 +1,4 @@
-\section{Electric Propulsion Method Selection}
+\chapter{Electric Propulsion Method Selection}
 
 To determine the baseline design for the \ac{EP} system being developed, several EP technologies were evaluated for compatibility with the requirements. Some of the primary determining factors included:
 
@@ -13,7 +13,7 @@ To determine the baseline design for the \ac{EP} system being developed, several
 
 While most of these requirements are already defined, the thrust requirement needs to be further refined.
 
-\subsection{Thrust Requirement}
+\section{Thrust Requirement}
 One of the reqirements was that "The system should be capable of producing a thrust level sufficient for orbit keeping of a nanosatellite at 200km altitude". To calculate the necessary thrust levels for maintaining a stable orbit at various altitudes, a python script was developed. The script considered atmospheric drag as the primary actor, while assuming all other forces such as solar radiation pressure were negligible. The drag force was calculated using the standard drag equation:
 
 \begin{equation}
@@ -45,12 +45,12 @@ As shown in fig \ref{fig:drag_force_vs_altitude}, the script iterated over a ran
 
 Assuming that the drag force is the only force acting on the satellite, the required thrust to maintain a stable orbit is equal in magnitude and opposite in direction to the drag force. The results indicated that a thrust level of approximately ... mN would be sufficient for orbit keeping at 200km altitude for a nanosatellite in the 1-10 kg range. Hence any force greater than this would be sufficient for orbit keeping and if sufficiently higher thrust levels were available, the system could also be used for orbit raising.
 
-\subsection{Propulsion Methods Considered}
+\section{Propulsion Methods Considered}
 
-\subsubsection{Gridded Ion Thrusters}
+\subsection{Gridded Ion Thrusters}
 
-\subsubsection{Hall Effect Thrusters}
+\subsection{Hall Effect Thrusters}
 
-\subsection{Selection Results}
+\section{Selection Results}
 
 % Technologies such as Hall-effect thrusters, ion thrusters, and electrospray thrusters were considered.
