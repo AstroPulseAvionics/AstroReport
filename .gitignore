@@ -25,6 +25,7 @@
 *.glsdefs
 *.ist
 *.xdv
+*.bbl-SAVE-ERROR
 
 # Editor-specific files (optional)
 *.swp

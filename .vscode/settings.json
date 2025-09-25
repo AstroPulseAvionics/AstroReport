@@ -20,6 +20,7 @@
   "**/*.ist": true,
   "**/*.glsdefs": true,
   "**/*.xdv": true,
+  "**/*.bbl-SAVE-ERROR": true
 
   },
 }
