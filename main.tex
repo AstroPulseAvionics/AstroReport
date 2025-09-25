@@ -73,6 +73,9 @@
 
 \renewcommand{\headrule}{\hbox to\headwidth{\color{black}\leaders\hrule height \headrulewidth\hfill}}
 
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
 % ---------------------TITLE SETUP---------------------
 % Redefine \maketitle to include the image
 \makeatletter
