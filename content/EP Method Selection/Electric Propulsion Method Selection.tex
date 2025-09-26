@@ -11,10 +11,9 @@ To determine the baseline design for the \ac{EP} system being developed, several
     \item Flight Heritage
 \end{itemize}
 
-While most of these requirements are already defined, the thrust requirement needs to be further refined.
-
+While most of these requirements are already defined, the thrust requirement needs to be further refined. 
 \section{Thrust Requirement}
-One of the reqirements was that "The system should be capable of producing a thrust level sufficient for orbit keeping of a nanosatellite at 200km altitude". To calculate the necessary thrust levels for maintaining a stable orbit at various altitudes, a python script was developed. The script considered atmospheric drag as the primary actor, while assuming all other forces such as solar radiation pressure were negligible. The drag force was calculated using the standard drag equation:
+One of the requirements was that "The system should be capable of producing a thrust level sufficient for orbit keeping of a nanosatellite at 200km altitude". To calculate the necessary thrust levels for maintaining a stable orbit at various altitudes, a python script was developed. The script considered atmospheric drag as the primary actor, while assuming all other forces such as solar radiation pressure were negligible. The drag force was calculated using the standard drag equation:
 
 \begin{equation}
     F_d = \frac{1}{2} C_d \rho A v^2
@@ -54,6 +53,8 @@ Assuming that the drag force is the only force acting on the satellite, the requ
 \subsection{Gridded Ion Thrusters}
 
 \subsection{Field Emission Electric Propulsion (FEEP) Thrusters}
+
+ A subset of electrostatic propulsion, FEEP, uses electrostatic fields to extract and accelerate charged particle, typically metal ions, from a liquid metal propellant, such as indium \cite{feep-plasma-propulsion}. The fundamental mechanism of FEEP involves the generation of a very strong electric field (on the order of $10^9~\mathrm{V/m}$) at the sharp tips of field emission cathodes. This electric field ionizes the liquid metal and accelerates the resulting positive ions out of the emitter at high velocities, generating thrust \cite{feep-general-tip-design}\cite{feep-ion-emitter-study}. 
 
 \subsection{Hall Effect Thrusters}
 
