@@ -33,3 +33,6 @@
 .#*
 .DS_Store
 Thumbs.db
+
+# Compiled PDF files
+main.pdf
