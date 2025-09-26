@@ -26,6 +26,7 @@
 *.ist
 *.xdv
 *.bbl-SAVE-ERROR
+*.run.xml
 
 # Editor-specific files (optional)
 *.swp
