@@ -27,6 +27,7 @@
 *.xdv
 *.bbl-SAVE-ERROR
 *.run.xml
+*.synctex
 
 # Editor-specific files (optional)
 *.swp
