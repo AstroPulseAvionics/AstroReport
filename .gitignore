@@ -28,6 +28,7 @@
 *.bbl-SAVE-ERROR
 *.run.xml
 *.synctex
+*.synctex(busy)
 
 # Editor-specific files (optional)
 *.swp
