@@ -48,9 +48,28 @@ Assuming that the drag force is the only force acting on the satellite, the requ
 
 \subsection{Electrospray Thrusters}
 
-\subsection{Arc Thrusters}
+Electrospray thrusters operate by electrostatically extracting ions or charged droplets from an ionic liquid propellant under high electric fields. The liquid surface forms Taylor cones at sharp emitter tips, from which charged particles are accelerated to generate thrust \cite{levchenko-propulsion_summary}. Ionic liquids such as 1-ethyl-3-methylimidazolium tetrafluoroborate (EMI-BF$_4$) and bis(trifluoromethylsulfonyl)imide (EMI-Im) are commonly employed due to their negligible vapor pressure and storability at ambient conditions, making them attractive for CubeSat propulsion \cite{alnaqbi-propulsion_summary}.
+
+Electrospray thrusters typically generate thrust in the μN to few-mN range, with specific impulses generally in the ≈500–1800~s range (ionic-regime devices tend toward the upper end; e.g., the TILE demonstration showed ≈1800~s while typical MEMS and laboratory electrospray designs report ≈850–1263~s). \cite{alnaqbi-propulsion_summary,tummala-propulsion_summary,lozano-smallspacecraft_summary}. Their power requirements are modest, spanning from sub-watt operation to several tens of watts, which makes them compatible with CubeSat-scale power systems. The absence of a plasma discharge eliminates the need for cathodes or magnetic confinement systems, reducing overall system complexity compared to other plasma-based thrusters \cite{lozano-smallspacecraft_summary}.
+
+Despite these advantages, electrospray thrusters face challenges related to long-term emitter stability, wetting behavior, and contamination. Nevertheless, there is a growing flight heritage. MIT’s SiEPS and NASA’s iEPS thrusters have been demonstrated in-orbit, showing that electrosprays are a practical solution for precision CubeSat maneuvers \cite{alnaqbi-propulsion_summary}.
 
 \subsection{Gridded Ion Thrusters}
+
+Gridded ion thrusters (GITs) generate thrust by ionizing a noble gas propellant, most commonly xenon, and accelerating the ions electrostatically through a system of precision-aligned grids. An external cathode supplies electrons to neutralize the ion beam, preventing spacecraft charging \cite{feep-plasma-propulsion}. These thrusters are among the most efficient electric propulsion systems, with overall efficiencies reaching 60–70\% in optimized designs \cite{fundamentals-of-electric-propulsion}.
+
+Performance depends strongly on scale: miniature ion engines for nanosatellites can achieve thrust levels of $0.1$–$1.5$~mN at power inputs of $10$–$50$~W, with specific impulses ranging from $1000$–$3000$~s \cite{tummala-propulsion_summary}. Larger spacecraft-class thrusters, such as those used in NASA’s Dawn mission, provide up to hundreds of mN of thrust at kilowatt power levels, with $I_{sp}$ exceeding 4000~s \cite{bpt-4000}. While xenon is the dominant propellant, alternatives such as krypton and iodine have also been tested for CubeSat and low-cost applications \cite{lozano-smallspacecraft_summary}. 
+
+System complexity is relatively high: GITs require ionization chambers, multi-grid assemblies, beam neutralizers, and precise power management. However, their flight heritage is unmatched — with a history dating back to SERT-1 in 1964 and extending through numerous deep space and Earth-orbiting missions. Recent CubeSat-scale demonstrations, such as the University of Tokyo’s $\mu$1 thruster on HODOYOSHI-4, validate their application in nanosatellite contexts \cite{alnaqbi-propulsion_summary}.
+
+\subsection{Vacuum Arc Thrusters}
+
+Vacuum arc thrusters (VATs) are pulsed propulsion devices that generate thrust by initiating an arc discharge on a solid cathode, commonly titanium. The discharge vaporizes and ionizes cathode material at localized arc spots, producing a plasma plume expelled at high velocity \cite{schein-vat}. Since the electrode itself serves as both propellant and discharge source, VATs require no external propellant feed system, which simplifies integration for small spacecraft.
+
+VATs typically provide impulse bits of tens of $\mu$N·s, with average thrust levels from tens of $\mu$N to sub-mN depending on pulse frequency and electrode material. Their specific impulse usually falls between 1000–3000~s, though performance depends strongly on cathode composition \cite{chowdhury-vat}. Power requirements are low on average but involve large instantaneous discharge currents, which places demands on pulsed power electronics. 
+
+System complexity is relatively low compared to gas-fed thrusters, though erosion of cathode surfaces and feeding mechanisms for long-duration operation remain key challenges. A deployable VAT system for CubeSat end-of-life disposal was proposed and demonstrated by Kim et al. \cite{kim-vat}, highlighting VATs as a candidate for orbital debris mitigation. Flight heritage includes the $\mu$CAT thruster aboard BRICSat-P and BRICSat-2, demonstrating successful on-orbit operation \cite{schein-vat}. Although less mature than ion or Hall thrusters, VATs are increasingly viable for compact, low-cost CubeSat propulsion.
+
 
 \subsection{Field Emission Electric Propulsion (FEEP) Thrusters}
 
